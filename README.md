@@ -24,6 +24,10 @@ https://www.youtube.com/watch?v=O1bHYk6ja5E
 
 https://youtu.be/iZhHXWIzOcU
 
+## 作業七影片講解
+
+https://youtu.be/QIUVYzuS808
+
 ## 作業九影片講解
 
 https://youtu.be/n1_JBO7IMHQ
