@@ -57,7 +57,7 @@
         <h1>HW3 詳解</h1>
       </section>
       <!--Q1-->
-      <section>
+      <!-- <section>
         <span class="subtle">Question 1</span>
         <section data-auto-animate>
           <h2>問題1</h2>
@@ -100,6 +100,35 @@
                   <li>return \(one\_one\)</li>
                 </ol>
               </ul>
+            </div>
+          </div>
+        </section>
+      </section> -->
+      <!--Q1-->
+      <section>
+        <span class="subtle">Question 1</span>
+        <section data-auto-animate>
+          <h2>問題1</h2>
+          <h4>page 226, chapter 3.2 Example 9</h4>
+          <div class="question-block" data-id="question1">
+            <span data-id="q1" style="display: block">
+                Give a big-$O$ estimate for $f(n) = 3n \log(n!) + (n^2 + 3) \log n$, where n is a positive integer.
+            </span>
+          </div>
+        </section>
+        <section data-auto-animate>
+          <h2>問題1</h2>
+          <h4>page 214, chapter 3.1 Exercises 24</h4>
+          <div class="question-block" data-id="question1">
+            <span data-id="q1" style="display: block">
+                Give a big-$O$ estimate for $f(n) = 3n \log(n!) + (n^2 + 3) \log n$, where n is a positive integer.
+            </span>
+          </div>
+          <div class="tiny-text">
+            <div>
+                First, the product $3n \log(n!)$ will be estimated. From Example 6 we know that $\log(n!)$ is $O(n \log n)$. Using this estimate and the fact that $3n$ is $O(n)$, Theorem 3 gives the estimate that $3n \log(n!)$ is $O(n^2 \log n)$.
+                Next, the product $(n^2 + 3) \log n$ will be estimated. Because $(n^2 + 3) < 2n^2$ when $n > 2$, it follows that $n^2 + 3$ is $O(n^2)$. Thus, from Theorem 3 it follows that $(n^2 + 3) \log n$ is $O(n^2 \log n)$.
+                Using Theorem 2 to combine the two big-$O$ estimates for the products shows that $f(n) = 3n \log(n!) + (n^2 + 3) \log n$ is $\color{red} O(n^2 \log n)$.
             </div>
           </div>
         </section>
