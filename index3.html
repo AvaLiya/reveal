@@ -125,10 +125,11 @@
             </span>
           </div>
           <div class="tiny-text">
+            <img src="img/ch3/HW03_1.jpg" alt="" />
             <div>
                 First, the product $3n \log(n!)$ will be estimated. From Example 6 we know that $\log(n!)$ is $O(n \log n)$. Using this estimate and the fact that $3n$ is $O(n)$, Theorem 3 gives the estimate that $3n \log(n!)$ is $O(n^2 \log n)$.
                 Next, the product $(n^2 + 3) \log n$ will be estimated. Because $(n^2 + 3) < 2n^2$ when $n > 2$, it follows that $n^2 + 3$ is $O(n^2)$. Thus, from Theorem 3 it follows that $(n^2 + 3) \log n$ is $O(n^2 \log n)$.
-                Using Theorem 2 to combine the two big-$O$ estimates for the products shows that $f(n) = 3n \log(n!) + (n^2 + 3) \log n$ is $\color{red} O(n^2 \log n)$.
+                Using Theorem 2 to combine the two big-$O$ estimates for the products shows that $f(n) = 3n \log(n!) + (n^2 + 3) \log n$ is <span class="fragment highlight-red">$O(n^2 \log n)$</span>.
             </div>
           </div>
         </section>
@@ -186,7 +187,8 @@
             <ol type="alphaList">
               <li class="fragment">
                 Yes, since \(17x+11\leq17x+x=18x\leq18x^2\) for all
-                \(x>11\),<span class="fragment highlight-red">\(C = 18, k = 11\)</span>.
+                \(x>11\),
+                <span class="fragment highlight-red">\(C = 18, k = 11\)</span>.
               </li>
               <li class="fragment">
                 Yes, since \(x^2+1000\leq x^2+x^2=2x^2\) for all
@@ -199,11 +201,12 @@
               </li>
               <li class="fragment">
                 No, If there were a constant \(C\) such that
-                <span class="fragment highlight-blue">\(x^4/2\leq Cx^2 \) for sufficiently large \(x\),then we
+                <span class="fragment highlight-blue">\(x^4/2\leq Cx^2 \) for sufficiently large \(x\), then we
                   would have \(C\geq x^2/2\).</span>
               </li>
               <li class="fragment">
-                No, If \(2^x\) were \(O(x^2)\),<span class="fragment highlight-blue">then the fraction \(2^x/x^2\)
+                No, If \(2^x\) were \(O(x^2)\),
+                <span class="fragment highlight-blue">then the fraction \(2^x/x^2\)
                   would have to be bounded
                   above by some constant \(C\).</span>
               </li>
