@@ -341,15 +341,15 @@
 							Solve the congruence $4x \equiv 5$ (mod 9) using the inverse of 4 modulo 9.
 						</span>
 					</div>
-					<p class="tiny-text even-tinier">
-						To solve the congruence $4x \equiv 5$ (mod 9) using the inverse of 4 modulo 9, 
-                        first, find the multiplicative inverse of 4 modulo 9. The inverse is a number 'y' such that $4*y \equiv 1$ (mod 9).
-                        By checking the multiples of 4, we find that $4*7 = 28$ which is 1 more than 27 (a multiple of 9). 
+					<p class="tiny-text">
+						To solve the congruence $4x \equiv 5$ (mod 9) using the inverse of 4 modulo 9, <br>
+                        first, find the multiplicative inverse of 4 modulo 9. The inverse is a number 'y' such that $4*y \equiv 1$ (mod 9).<br>
+                        By checking the multiples of 4, we find that $4*7 = 28$ which is 1 more than 27 (a multiple of 9). <br>
                         <span class="fragment highlight-red">Therefore, 7 is the inverse of 4 modulo 9.</span><br>
-                        Next, we multiply both sides of the original congruence by this inverse: $7*(4x) \equiv 7*5$ (mod 9).
-                        This simplifies to $28x \equiv 35$ (mod 9), 
+                        Next, we multiply both sides of the original congruence by this inverse: $7*(4x) \equiv 7*5$ (mod 9).<br>
+                        This simplifies to $28x \equiv 35$ (mod 9), <br>
                         which further simplifies to $x \equiv 35$ (mod 9) since $28 \equiv 1$ (mod 9).<br>
-                        Reducing 35 modulo 9 gives us $35 \equiv 8$ (mod 9), because $35 - 8 = 27$, which is a multiple of 9. 
+                        Reducing 35 modulo 9 gives us $35 \equiv 8$ (mod 9), because $35 - 8 = 27$, which is a multiple of 9. <br>
                         So the solution is <span class="fragment highlight-red">$x \equiv 8$ (mod 9)</span>.
 					</p>
 				</section>
@@ -381,7 +381,7 @@
 						<p class="fragment shrinked question-block side-note">
 							General Case:
 							$x = \sum_{i=1}^n a_i M_i y_i $
-					</p>
+					    </p>
 					</div>
 					<p class="tiny-text">
 						The answer will be unique modulo $3 · 4 · 5 = 60$<br>
@@ -418,15 +418,16 @@
 							Use Fermat's little theorem to compute $3^{302}$ mod 5, $3^{302}$ mod 7, and $3^{302}$ mod 11.
 						</span>
 					</div>
-					<p class="tiny-text even-tinier">
-						By Fermat's little theorem we know that $3^4 \equiv 1$ (mod 5); 
-                        therefore $3^{300} = (3^4)^{75} \equiv 1^{75} \equiv 1$ (mod 5), 
-                        and so $3^{302} = 3^2 \cdot 3^{300} \equiv 9 \cdot 1 = 9$ (mod 5), so $3^{302}$ mod 5 = 4.<br>
+					<p class="tiny-text">
+						By Fermat's little theorem we know that $3^4 \equiv 1$ (mod 5); <br>
+                        therefore $3^{300} = (3^4)^{75} \equiv 1^{75} \equiv 1$ (mod 5), <br>
+                        and so $3^{302} = 3^2 \cdot 3^{300} \equiv 9 \cdot 1 = 9$ (mod 5), <br>
+                        so $3^{302}$ mod 5 = 4.<br>
 
-                        Similarly, $3^6 \equiv 1$ (mod 7); therefore $3^{300} = (3^6)^{50} \equiv 1$ (mod 5), 
+                        Similarly, $3^6 \equiv 1$ (mod 7); therefore $3^{300} = (3^6)^{50} \equiv 1$ (mod 5), <br>
                         and so $3^{302} = 3^2 \cdot 3^{300} \equiv 9$ (mod 7), so $3^{302}$ mod 7 = 2.<br>
 
-                        Finally, $3^{10} \equiv 1$ (mod 11); therefore $3^{300} = (3^{10})^{30} \equiv 1$ (mod 11), 
+                        Finally, $3^{10} \equiv 1$ (mod 11); therefore $3^{300} = (3^{10})^{30} \equiv 1$ (mod 11), <br>
                         and so $3^{302} = 3^2 \cdot 3^{300} \equiv 9$ (mod 11), so $3^{302}$ mod 11 = 9.
 					</p>
 				</section>
