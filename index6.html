@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <title>HW6 詳解</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link
+      rel="stylesheet"
+      href="plugin/highlight/monokai.css"
+      id="highlight-theme"
+    />
+    <link rel="stylesheet" href="custom.css" />
+    <style>
+      canvas#live2D {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        pointer-events: none;
+        position: fixed !important;
+        bottom: 0;
+        right: -20px;
+        z-index: 999999;
+        opacity: 1;
+      }
+
+      canvas#live2D:hover {
+        transition-delay: 0.5s;
+      }
+
+      canvas#live2D.hidden,
+      canvas#live2D:hover {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        opacity: 0;
+      }
+    </style>
+
+    <!-- Pollyfill script -->
+    <script src="./anime/dist/core-minified.js"></script>
+    <!-- Live2DCubismCore script -->
+    <script src="./anime/core/live2dcubismcore.js"></script>
+    <!-- Build script -->
+    <script src="./anime/dist/bundle.js"></script>
+    <script src="./anime/custom.js"></script>
+  </head>
+
+  <body onkeydown="toggleAvatar(event)">
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>HW6 詳解</h1>
+        </section>
+        <!--Q1-->
+        <section>
+          <span class="subtle">Question 1</span>
+          <section data-auto-animate>
+            <h2>問題1</h2>
+            <h4>page 418, chapter 6.1 Exercise 36</h4>
+            <div class="question-block" data-id="question1">
+                How many functions are there from the set \{1, 2, ... , n\},
+                where n is a positive integer, to the set \{0, 1\}?
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>問題1</h2>
+            <h4>page 350, Section 5.1 Exercise 6</h4>
+            <div class="question-block" data-id="question1">
+              Prove that $1 ⋅ 1! + 2 ⋅ 2! + ⋯ + n ⋅ n! = (n + 1)! − 1$ whenever
+              $n$ is a positive integer.
+            </div>
+            <p class="tiny-text">
+                There are <span class="fragment highlight-red">$2^n$</span> such functions, since there is a choice of 2 function values for each element of the domain.
+            </p>
+          </section>
+        </section>
+
+        <!--Q2-->
+        <section>
+            <span class="subtle">Question 2</span>
+            <section data-auto-animate>
+              <h2>問題2</h2>
+              <h4>page 444, chapter 6.4 Exercise 10</h4>
+              <div class="question-block" data-id="question1">
+                Use the binomial theorem to expand $(3x - y^2)^4$ into a sum
+                of terms of the form $cx^ay^b$, where c is a real number and
+                a and b are nonnegative integers.
+              </div>
+            </section>
+            <section data-auto-animate>
+              <h2>問題2</h2>
+              <h4>page 444, chapter 6.4 Exercise 10</h4>
+              <div class="question-block" data-id="question1">
+                Use the binomial theorem to expand $(3x - y^2)^4$ into a sum
+                of terms of the form $cx^ay^b$, where c is a real number and
+                a and b are nonnegative integers.
+              </div>
+              <img src="img/ch6/HW06_2.jpg" alt="" />
+            </section>
+          </section>
+
+      </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script>
+      function getPath() {
+        var path = '';
+        nodes = window.location.pathname.split('/');
+        for (var index = 0; index < nodes.length - 3; index++) {
+          path += '../';
+        }
+        return path;
+      }
+
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        math: {
+          mathjax:
+            'https://cdn.jsdelivr.net/gh/mathjax/mathjax@2.7.8/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          // pass other options into `MathJax.Hub.Config()`
+          TeX: {
+            Macros: {
+              RR: '{\\bf R}',
+            },
+          },
+        },
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath],
+        dependencies: [
+          {
+            src: 'plugin/math/math.js',
+            async: true,
+          },
+        ],
+      });
+
+      Reveal.on('autoanimate', event => {
+        setTimeout(function () {
+          removeAllAutoAnimates(event.toSlide);
+        }, Reveal.getConfig().autoAnimateDuration * 1000);
+      });
+
+      function removeAllAutoAnimates(element) {
+        try {
+          element.removeAttribute('data-auto-animate-target');
+          element.childNodes.forEach(element => {
+            removeAllAutoAnimates(element);
+          });
+        } catch {}
+      }
+    </script>
+
+    <div style="display: none" id="audio"></div>
+  </body>
+  <script>
+    // LIPSYNC
+    var audioElem = document.getElementById('audio');
+    var modifier = 150;
+    var lastVolume = 0;
+    setInterval(() => {
+      var volume = getMicorphoneVolume() / 150;
+      var lowThreshold = 0.3;
+      var modifiedVolume = 0;
+      if (volume > lowThreshold) {
+        modifiedVolume = volume * 0.7 + lastVolume * 0.3;
+      } else {
+        modifiedVolume = lastVolume / 2;
+      }
+      audioElem.innerHTML = modifiedVolume;
+      lastVolume = modifiedVolume;
+    }, 10);
+
+    //toggle avatar visibility
+    function toggleAvatar(e) {
+      if (e.keyCode != 192) {
+        return;
+      }
+      var avatar = $('canvas#live2D');
+      if (avatar.hasClass('hidden')) {
+        avatar.removeClass('hidden');
+      } else {
+        avatar.addClass('hidden');
+      }
+    }
+  </script>
+</html>
