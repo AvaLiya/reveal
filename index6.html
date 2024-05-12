@@ -96,7 +96,7 @@
             <section data-auto-animate>
               <h2>問題2</h2>
               <h4>page 444, chapter 6.4 Exercise 10</h4>
-              <div class="question-block" data-id="question1">
+              <div class="question-block" data-id="question2">
                 Use the binomial theorem to expand $(3x - y^2)^4$ into a sum
                 of terms of the form $cx^ay^b$, where c is a real number and
                 a and b are nonnegative integers.
@@ -105,7 +105,7 @@
             <section data-auto-animate>
               <h2>問題2</h2>
               <h4>page 444, chapter 6.4 Exercise 10</h4>
-              <div class="question-block" data-id="question1">
+              <div class="question-block" data-id="question2">
                 Use the binomial theorem to expand $(3x - y^2)^4$ into a sum
                 of terms of the form $cx^ay^b$, where c is a real number and
                 a and b are nonnegative integers.
@@ -120,7 +120,7 @@
           <section data-auto-animate>
             <h2>問題3</h2>
             <h4>page 455, chapter 6.5 Exercise 14</h4>
-            <div class="question-block" data-id="question1">
+            <div class="question-block" data-id="question3">
               How many solutions are there to the equation
               \begin{eqnarray*}
                   x_1 + x_2 + x_3 + x_4 = 17,
@@ -131,7 +131,7 @@
           <section data-auto-animate>
             <h2>問題3</h2>
             <h4>page 455, chapter 6.5 Exercise 14</h4>
-            <div class="question-block" data-id="question1">
+            <div class="question-block" data-id="question3">
               How many solutions are there to the equation
               \begin{eqnarray*}
                   x_1 + x_2 + x_3 + x_4 = 17,
@@ -142,6 +142,53 @@
               \begin{eqnarray*}
                 C(\underline{4} + \underline{17} - 1, \underline{17}) = C(20, \underline{17}) = \underline{1140}
               \end{eqnarray*}
+            </div>
+          </section>
+        </section>
+
+        <!--Q4-->
+        <section>
+          <span class="subtle">Question 4</span>
+          <section data-auto-animate>
+            <h2>問題4</h2>
+            <h4>page 455, chapter 6.5 Exercise 16</h4>
+            <div class="question-block" data-id="question4">
+              How many solutions are there to the equation
+              \begin{eqnarray*}
+                  x_1 + x_2 + x_3 + x_4 + x_5+ x_6= 29,
+              \end{eqnarray*}
+              where $x_i$, $i$ = 1, 2, 3, 4, 5, 6, is a nonnegative integer such that
+              \begin{enumerate}[label=(\alph*)]
+                  \item $x_i > 1$ for $i$ = 1, 2, 3, 4, 5, 6 ?
+                  \item $x_1 \ge 1$, $x_2 \ge 2$, $x_3 \ge 3$, $x_4 \ge 4$, $x_5 > 5$, and $x_6 \ge 6$ ?
+                  \item $x_1 \le 5$ ?
+                  \item $x_1 < 8$ and $x_2 > 8$ ?
+              \end{enumerate}
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>問題4</h2>
+            <h4>page 455, chapter 6.5 Exercise 16</h4>
+            <div class="question-block" data-id="question4">
+              How many solutions are there to the equation
+              \begin{eqnarray*}
+                  x_1 + x_2 + x_3 + x_4 + x_5+ x_6= 29,
+              \end{eqnarray*}
+              where $x_i$, $i$ = 1, 2, 3, 4, 5, 6, is a nonnegative integer such that
+              \begin{enumerate}[label=(\alph*)]
+                  \item $x_i > 1$ for $i$ = 1, 2, 3, 4, 5, 6 ?
+                  \item $x_1 \ge 1$, $x_2 \ge 2$, $x_3 \ge 3$, $x_4 \ge 4$, $x_5 > 5$, and $x_6 \ge 6$ ?
+                  \item $x_1 \le 5$ ?
+                  \item $x_1 < 8$ and $x_2 > 8$ ?
+              \end{enumerate}
+            </div>
+            <div class="tiny-text">
+              \begin{enumerate}[label=(\alph*)]
+                \item We require each $x_i \ge 2$ . This uses up 12 of the 29 total required, so the problem is the same as finding the number of solutions to $x'_1 + x'_2 + x'_3 + x'_4 + x'_5 + x'_6 = 17$ with each $x'_i$ a nonnegative integer. The number of solutions is therefore \underline{$C(6 + 17 - 1, 17) = C(22, 17) = 26334$}.
+                \item The restrictions use up 22 of the total, leaving a free total of 7. Therefore the answer is \underline{$C(6 + 7 - 1, 7) = C(12, 7) = 792$}.
+                \item The number of solutions without restriction is\\ \underline{$C(6 + 29 - 1, 29) = C(34, 29) = 278256$}. The number of\\ solution violating the restriction by having $x_1 \ge 6$ is\\ \underline{$C(6 + 23 - 1, 23) = C(28, 23) = 98280$}. Therefore the answer is \underline{$278256 - 98280 = 179976$}.
+                \item The number of solutions with $x_2 \ge 9$ (as required) but without the restriction on $x_1$ is \underline{$C(6 + 20 - 1, 20) = C(25, 20) = 53130$}. The number of solution violating the additional restriction by having $x_1 \ge 8$ is \underline{$C(6 + 12 - 1, 12) = C(17, 12) = 6188$}. Therefore the answer is \underline{$53130 - 6188 = 46942$}.
+              \end{enumerate}
             </div>
           </section>
         </section>
