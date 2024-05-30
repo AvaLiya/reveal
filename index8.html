@@ -217,14 +217,14 @@
                 Find the solution of the recurrence relation $a_n = 2a_{n-1} + 3 \cdot 2^n$.
             </div>
             <p class="tiny-text">
-                The associated homogeneous recurrence relation is $a_n = 2a_{n-1}$. 
-                We easily solve it to obtain $a_n^{(h)} = \alpha2^n$. 
-                Next we need a particular solution to the given recurrence relation. 
-                By Theorem 6 we want to look for a function of the form $a_n = cn \cdot 2^n$. 
-                We plug this into our recurrence relation and obtain $cn \cdot 2^n = 2c(n - 1)2^{n-1} + 3 \cdot 2^n$. 
-                We divide through by $2^{n-1}$, obtaining $2cn = 2c(n - 1) + 6$, whence with a little simple algebra $c = 3$. 
-                Therefore the particular solution we seek is $a_n^{(p)} = 3n\cdot2^n$. 
-                So the general solution is the sum of the homogeneous solution and this particular solution, 
+                The associated homogeneous recurrence relation is $a_n = 2a_{n-1}$. <br>
+                We easily solve it to obtain $a_n^{(h)} = \alpha2^n$. <br>
+                Next we need a particular solution to the given recurrence relation. <br>
+                By Theorem 6 we want to look for a function of the form $a_n = cn \cdot 2^n$. <br>
+                We plug this into our recurrence relation and obtain $cn \cdot 2^n = 2c(n - 1)2^{n-1} + 3 \cdot 2^n$. <br>
+                We divide through by $2^{n-1}$, obtaining $2cn = 2c(n - 1) + 6$, whence with a little simple algebra $c = 3$. <br>
+                Therefore the particular solution we seek is $a_n^{(p)} = 3n\cdot2^n$. <br>
+                So the general solution is the sum of the homogeneous solution and this particular solution, <br>
                 namely $a_n = \underline{\alpha2^n + 3n \cdot 2^n = (3n + \alpha)2^n}$.
             </p>
           </section>
@@ -267,15 +267,81 @@
                 </ol>
             </div>
             <ol class="alphaList tiny-text">
-                <li>Apparently all the terms are 0 except for the seven -1's shown. Thus $f(x) = -1 -x -x^2 -x^3 -x^4 -x^5 -x^6$. This is already in closed form, but we can also write it more compactly as $f(x) = \underline{-(1 - x^7)/(1 - x)}$, making use of the identity from Example 2.</li>
-                <li>This sequence fits the pattern in Table 1 for $1/(1 - ax)$ with $a = \underline{3}$ . Therefore the generating function is $1/(1 - \underline{3}x)$.</li>
-                <li>We can factor out $3x^2$ and write the generating function as $\underline{3x^2(1 - x + x^2 - x^3 + ...) = 3x^2/(1 + x)}$, again using the identity in Table 1.</li>
-                <li>Except for the extra x (the coefficient of x is 2 rather than 1), the generating function is just $1/(1 - x)$. Therefore the answer is $ \underline{x} + (1/(1 - x))$.</li>
-                <li>From Table 1, we see that the binomial theorem applies and we can write this as $\underline{(1 + 2x)^7}$.</li>
-                <li>We can factor out -3 and write the generating function as $\underline{-3(1 - x + x^2 - x^3 + ...) = -3/(1 + x)}$, using the identity in Table 1.</li>
-                <li>We can factor out x and write the generating function as $\underline{x(1 - 2x + 4x^2 - 8x^3 + ...) = x/(1 + 2x)}$, using the sixth identity in Table 1 with $a = -2$.</li>
-                <li>From Table 1 we see that the generating function here is $\underline{1/(1 - x^2)}$.</li>
+                <li>$f(x) = \underline{-(1 - x^7)/(1 - x)}$</li>
+                <li>$1/(1 - ax)$ with $a = \underline{3}$. Therefore the generating function is $1/(1 - \underline{3}x)$.</li>
+                <li>$\underline{3x^2(1 - x + x^2 - x^3 + ...) = 3x^2/(1 + x)}$</li>
+                <li>$\underline{x} + (1/(1 - x))$</li>
+                <li>$\underline{(1 + 2x)^7}$</li>
+                <li>$\underline{-3(1 - x + x^2 - x^3 + ...) = -3/(1 + x)}$</li>
+                <li>$\underline{x(1 - 2x + 4x^2 - 8x^3 + ...) = x/(1 + 2x)}$</li>
+                <li>$\underline{1/(1 - x^2)}$</li>
             </ol>
+          </section>
+        </section>
+
+        <!--Q6-->
+        <section>
+          <span class="subtle">Question 6</span>
+          <section data-auto-animate>
+            <h2>問題6</h2>
+            <h4>page 576, chapter 8.4 Exercise 16</h4>
+            <div class="question-block" data-id="question6">
+                Use generating functions to find the number of ways to choose a dozen bagels from three varieties—
+                egg, salty, and plain—if at least two bagels of each kind but no more than three salty bagels are chosen.
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>問題6</h2>
+            <h4>page 576, chapter 8.4 Exercise 16</h4>
+            <div class="question-block" data-id="question6">
+                Use generating functions to find the number of ways to choose a dozen bagels from three varieties—
+                egg, salty, and plain—if at least two bagels of each kind but no more than three salty bagels are chosen.
+            </div>
+            <p class="tiny-text">
+                The factors in the generating function for choosing the egg and plain bagels are both $x^2 + x^3 + x^4 + ...$. <br>
+                The factor for choosing the salty bagels is $x^2 + x^3$. <br>
+                Therefore the generating function for this problem is $(x^2 + x^ + x^4 + ...)^2(x^2 + x^3)$. <br>
+                We want to find the coefficient of $x^{12}$, since we want 12 bagels. <br>
+                This is equivalent to finding the coefficient of $x^6$ in $(1 + x + x^2 + ...)^2(1 + x)$. <br>
+                This function is $(1 + x)/(1 - x)^2$, so we want the coefficient of $x^6$ in $1/(1 - x)^2$, <br>
+                which is \underline{7}, plus the coefficient of $x^5$ in $1/(1 - x)^2$ , which is \underline{6}. <br>
+                Thus the answer is \underline{13}.
+            </p>
+          </section>
+        </section>
+
+        <!--Q7-->
+        <section>
+          <span class="subtle">Question 7</span>
+          <section data-auto-animate>
+            <h2>問題7</h2>
+            <h4>page 576, chapter 8.4 Exercise 18</h4>
+            <div class="question-block" data-id="question7">
+                In how many ways can 25 identical donuts be distributed to four police officers 
+                so that each officer gets at least three but no more than seven donuts?
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>問題7</h2>
+            <h4>page 576, chapter 8.4 Exercise 18</h4>
+            <div class="question-block" data-id="question7">
+                In how many ways can 25 identical donuts be distributed to four police officers 
+                so that each officer gets at least three but no more than seven donuts?
+            </div>
+            <p class="tiny-text">
+                Without changing the answer, we can assume that the jar has <br>
+                an infinite number of balls of each color; this will make the algebra easier. <br>
+                For the red and green balls the generating function is $1 + x + x^2 + ...$, <br>
+                but for the blue balls the generating function is $x^3 + x^4 + ...+ x^{10}$, <br>
+                so the generating function for the whole problem is $(1 + x + x^2 + ...)^2(x^3 + x^4 + ...+ x^{10})$. <br>
+                We seek the coefficient of $x^{14}$. This is the same as the coefficient of $x^{11}$ in
+                \begin{eqnarray*}
+                    (1 + x + x^2 + ...)^2(1 + x + ...+ x^7) = \frac{1 - x^8}{(1-x)^3}
+                \end{eqnarray*}
+                Since the coefficient of $x^n$ in $1/(1 - x)^3$ is $C(n + 2, 2)$, <br>
+                and we have two contributing terms determined by the numerator, <br>
+                our answer is $\underline{C(11 + 2, 2) - C(3 + 2, 2) = 68}$.
+            </p>
           </section>
         </section>
 
