@@ -101,7 +101,7 @@
                     <li>$F(n) = 3$ ?</li>
                 </ol>
             </div>
-            <ol class="alphaList">
+            <ol class="alphaList tiny-text">
                 <li>$p_2n^2 + p_1n + p_0$</li>
                 <li>$n^3p_02^n$</li>
                 <li>$n^3(p_1n + p_0)2^n$</li>
@@ -152,6 +152,129 @@
                     We plug the initial condition into our solution from part(a) to obtain $4 = a_1 = 2\alpha - 2 - 8 - 12$. 
                     This tells us that $\alpha = \underline{13}$. So the solution is $a_n = 13\cdot2^n - 2n^2 - 8n - 12$.
                 </li>
+            </ol>
+          </section>
+        </section>
+
+        <!--Q3-->
+        <section>
+          <span class="subtle">Question 3</span>
+          <section data-auto-animate>
+            <h2>問題3</h2>
+            <h4>page 552, chapter 8.2 Exercise 30</h4>
+            <div class="question-block" data-id="question3">
+                <ol class="alphaList">
+                    <li>Find all solutions of the recurrence relation $a_n = -5a_{n-1} - 6a_{n-2} + 42 \cdot 4n$.</li>
+                    <li>Find the solution of this recurrence relation with $a_1 = 56$ and $a_2 = 278$.</li>
+                </ol>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="question-block" data-id="question3">
+                <ol class="alphaList">
+                    <li>Find all solutions of the recurrence relation $a_n = -5a_{n-1} - 6a_{n-2} + 42 \cdot 4n$.</li>
+                    <li>Find the solution of this recurrence relation with $a_1 = 56$ and $a_2 = 278$.</li>
+                </ol>
+            </div>
+            <ol class="alphaList tiny-text">
+                <li>
+                    The associated homogeneous recurrence relation is $a_n = -5a_{n-1} - 6a_{n-2}$. 
+                    To solve it we find the characteristic equation $r^2 + 5r + 6 = 0$, 
+                    find that $r = -2$ and $r = -3$ are its solutions, 
+                    and therefore obtain the homogeneous solution $a_n^{(h)} = \alpha(-2)^n + \beta(-3)^n$. 
+                    Next we need a particular solution to the given recurrence relation. 
+                    By Theorem 6 we want to look for a function of the form $a_n = c\cdot4^n$. 
+                    We plug this into our recurrence relation and obtain $c\cdot4^n = -5c\cdot4^{n-1} - 6c\cdot4^{n-2} + 42\cdot4^n$. 
+                    We divide through by $4^{n-2}$, obtaining $16c = -20c - 6c + 42\cdot16$, whence with a little simple algebra $c = 16$. 
+                    Therefore the particular solution we seek is $a_n^{(p)} = 16\cdot4^n = 4^{n+2}$. 
+                    So the general solution is the sum of the homogeneous solution and this particular solution, 
+                    namely $a_n = \underline{\alpha(-2)^n + \beta(-3)^n + 4^{n+2}}$.
+                </li>
+                <li>
+                    We plug the initial conditions into our solution from part (a) to obtain 
+                    $56 = a_1 = -2\alpha - 3\beta + 64$ and $278 = a_2 = 4\alpha + 9\beta + 256$. 
+                    A little algebra yields $\alpha = \underline{1}$ and $\beta = \underline{2}$. 
+                    So the solution is $a_n = (-2)^n + 2(-3)^n + 4^{n+2}$.
+                </li>
+            </ol>
+          </section>
+        </section>
+
+        <!--Q4-->
+        <section>
+          <span class="subtle">Question 4</span>
+          <section data-auto-animate>
+            <h2>問題4</h2>
+            <h4>page 552, chapter 8.2 Exercise 32</h4>
+            <div class="question-block" data-id="question4">
+                Find the solution of the recurrence relation $a_n = 2a_{n-1} + 3 \cdot 2^n$.
+            </div>
+          </section>
+          <section data-auto-animate>
+            <h2>問題4</h2>
+            <h4>page 552, chapter 8.2 Exercise 32</h4>
+            <div class="question-block" data-id="question4">
+                Find the solution of the recurrence relation $a_n = 2a_{n-1} + 3 \cdot 2^n$.
+            </div>
+            <p class="tiny-text">
+                The associated homogeneous recurrence relation is $a_n = 2a_{n-1}$. 
+                We easily solve it to obtain $a_n^{(h)} = \alpha2^n$. 
+                Next we need a particular solution to the given recurrence relation. 
+                By Theorem 6 we want to look for a function of the form $a_n = cn \cdot 2^n$. 
+                We plug this into our recurrence relation and obtain $cn \cdot 2^n = 2c(n - 1)2^{n-1} + 3 \cdot 2^n$. 
+                We divide through by $2^{n-1}$, obtaining $2cn = 2c(n - 1) + 6$, whence with a little simple algebra $c = 3$. 
+                Therefore the particular solution we seek is $a_n^{(p)} = 3n\cdot2^n$. 
+                So the general solution is the sum of the homogeneous solution and this particular solution, 
+                namely $a_n = \underline{\alpha2^n + 3n \cdot 2^n = (3n + \alpha)2^n}$.
+            </p>
+          </section>
+        </section>
+
+        <!--Q5-->
+        <section>
+          <span class="subtle">Question 5</span>
+          <section data-auto-animate>
+            <h2>問題5</h2>
+            <h4>page 575, chapter 8.4 Exercise 4</h4>
+            <div class="question-block" data-id="question5">
+                Find a closed form for the generating function for each of these sequences. 
+                (Assume a general form for the terms of the sequence, using the most obvious choice of such a sequence.)
+                <ol class="alphaList">
+                    <li>$-1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, ...$</li>
+                    <li>$1, 3, 9, 27, 81, 243, 729, ...$</li>
+                    <li>$0, 0, 3, -3, 3, -3, 3, -3, ...$</li>
+                    <li>$1, 2, 1, 1, 1, 1, 1, 1, 1, ...$</li>
+                    <li>$\dbinom{7}{0}, 2\dbinom{7}{1}, 2^2\dbinom{7}{2}, ..., 2^7\dbinom{7}{7}, 0, 0, 0, 0, ...$</li>
+                    <li>$-3, 3, -3, 3, -3, 3, ...$</li>
+                    <li>$0, 1, -2, 4, -8, 16, -32, 64, ...$</li>
+                    <li>$1, 0, 1, 0, 1, 0, 1, 0, ...$</li>
+                </ol>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="question-block" data-id="question5">
+                Find a closed form for the generating function for each of these sequences. 
+                (Assume a general form for the terms of the sequence, using the most obvious choice of such a sequence.)
+                <ol class="alphaList">
+                    <li>$-1, -1, -1, -1, -1, -1, -1, 0, 0, 0, 0, 0, 0, ...$</li>
+                    <li>$1, 3, 9, 27, 81, 243, 729, ...$</li>
+                    <li>$0, 0, 3, -3, 3, -3, 3, -3, ...$</li>
+                    <li>$1, 2, 1, 1, 1, 1, 1, 1, 1, ...$</li>
+                    <li>$\dbinom{7}{0}, 2\dbinom{7}{1}, 2^2\dbinom{7}{2}, ..., 2^7\dbinom{7}{7}, 0, 0, 0, 0, ...$</li>
+                    <li>$-3, 3, -3, 3, -3, 3, ...$</li>
+                    <li>$0, 1, -2, 4, -8, 16, -32, 64, ...$</li>
+                    <li>$1, 0, 1, 0, 1, 0, 1, 0, ...$</li>
+                </ol>
+            </div>
+            <ol class="alphaList tiny-text">
+                <li>Apparently all the terms are 0 except for the seven -1's shown. Thus $f(x) = -1 -x -x^2 -x^3 -x^4 -x^5 -x^6$. This is already in closed form, but we can also write it more compactly as $f(x) = \underline{-(1 - x^7)/(1 - x)}$, making use of the identity from Example 2.</li>
+                <li>This sequence fits the pattern in Table 1 for $1/(1 - ax)$ with $a = \underline{3}$ . Therefore the generating function is $1/(1 - \underline{3}x)$.</li>
+                <li>We can factor out $3x^2$ and write the generating function as $\underline{3x^2(1 - x + x^2 - x^3 + ...) = 3x^2/(1 + x)}$, again using the identity in Table 1.</li>
+                <li>Except for the extra x (the coefficient of x is 2 rather than 1), the generating function is just $1/(1 - x)$. Therefore the answer is $ \underline{x} + (1/(1 - x))$.</li>
+                <li>From Table 1, we see that the binomial theorem applies and we can write this as $\underline{(1 + 2x)^7}$.</li>
+                <li>We can factor out -3 and write the generating function as $\underline{-3(1 - x + x^2 - x^3 + ...) = -3/(1 + x)}$, using the identity in Table 1.</li>
+                <li>We can factor out x and write the generating function as $\underline{x(1 - 2x + 4x^2 - 8x^3 + ...) = x/(1 + 2x)}$, using the sixth identity in Table 1 with $a = -2$.</li>
+                <li>From Table 1 we see that the generating function here is $\underline{1/(1 - x^2)}$.</li>
             </ol>
           </section>
         </section>
