@@ -304,8 +304,8 @@
                 We want to find the coefficient of $x^{12}$, since we want 12 bagels. <br>
                 This is equivalent to finding the coefficient of $x^6$ in $(1 + x + x^2 + ...)^2(1 + x)$. <br>
                 This function is $(1 + x)/(1 - x)^2$, so we want the coefficient of $x^6$ in $1/(1 - x)^2$, <br>
-                which is \underline{7}, plus the coefficient of $x^5$ in $1/(1 - x)^2$ , which is \underline{6}. <br>
-                Thus the answer is \underline{13}.
+                which is $\underline{7}$, plus the coefficient of $x^5$ in $1/(1 - x)^2$ , which is $\underline{6}$. <br>
+                Thus the answer is $\underline{13}$.
             </p>
           </section>
         </section>
@@ -343,6 +343,91 @@
                 our answer is $\underline{C(11 + 2, 2) - C(3 + 2, 2) = 68}$.
             </p>
           </section>
+        </section>
+
+        <!--Q8-->
+        <section>
+          <span class="subtle">Question 8</span>
+          <section data-auto-animate>
+            <h2>問題8</h2>
+            <h4>page 576, chapter 8.4 Exercise 24</h4>
+            <div class="question-block" data-id="question8">
+                <ol class="alphaList">
+                    <li>What is the generating function for {$a_k$}, where $a_k$ is the number of solutions of $x_1 + x_2 + x_3 + x_4 = k$ when $x_1$, $x_2$, $x_3$, and $x_4$ are integers with $x_1 \ge 3$, $1 \le x2 \le 5$, $0 \le x3 \le 4$, and $x4 \ge 1$?</li>
+                    <li>Use your answer to part (a) to find $a_7$.</li>
+                </ol>
+            </div>
+          </section>
+          <section data-auto-animate>
+            <div class="question-block" data-id="question8">
+                <ol class="alphaList">
+                    <li>What is the generating function for {$a_k$}, where $a_k$ is the number of solutions of $x_1 + x_2 + x_3 + x_4 = k$ when $x_1$, $x_2$, $x_3$, and $x_4$ are integers with $x_1 \ge 3$, $1 \le x2 \le 5$, $0 \le x3 \le 4$, and $x4 \ge 1$?</li>
+                    <li>Use your answer to part (a) to find $a_7$.</li>
+                </ol>
+            </div>
+            <ol class="alphaList tiny-text">
+                <li>
+                    The restriction on $x_1$ gives us the factor $x^3 + x^4 + x^5 + ...$. 
+                    The restriction on $x_2$ gives us the factor $x + x^2 + x^3 + x^4 + x^5$. 
+                    The restriction on $x_3$ gives us the factor $1 + x + x^2 + x^3 + x^4$ . 
+                    And the restriction on $x_4$ gives us the factor $x + x^2 + x^3 + ...$. 
+                    Thus the answer is the product of these:
+                    \begin{eqnarray*}
+                        \underline{(x^3 + x^4 + x^5 + ...)(x + x^2 + x^3 + x^4 + x^5)(1 + x + x^2 + x^3 + x^4)(x + x^2 + x^3 + ...)}
+                    \end{eqnarray*}
+                    We can use algebra to rewrite this in closed form as $x^5(1 + x + x^2 + x^3 + x^4)^2/(1 - x)^2$.
+                </li>
+                <li>
+                    We want the coefficient of $x^7$ in this series, 
+                    which is the same as the coefficient of $x^2$ in the series for
+                    \begin{eqnarray*}
+                        \frac{(1 + x + x^2 + x^3 + x^4)^2}{(1 - x)^2} = \frac{1+2x+3x^2+higher order terms}{(1 - x)^2}
+                    \end{eqnarray*}
+                    Since the coefficient of $x^n$ in $1/(1 - x)^2$ is n + 1, 
+                    our answer is $1 \cdot 3 + 2 \cdot 2 + 3 \cdot 1 = \underline{10}$.
+                </li>
+            </ol>
+          </section>
+        </section>
+
+        <!--Q9-->
+        <section>
+            <span class="subtle">Question 9</span>
+            <section data-auto-animate>
+              <h2>問題9</h2>
+              <h4>page 577, chapter 8.4 Exercise 34</h4>
+              <div class="question-block" data-id="question9">
+                Use generating functions to solve the recurrence relation $a_k = 7a_{k-1}$ with the initial condition $a_0 = 5$.
+              </div>
+            </section>
+            <section data-auto-animate>
+              <h2>問題9</h2>
+              <h4>page 577, chapter 8.4 Exercise 34</h4>
+              <div class="question-block" data-id="question9">
+                Use generating functions to solve the recurrence relation $a_k = 7a_{k-1}$ with the initial condition $a_0 = 5$.
+              </div>
+              <img src="img/ch8/HW08_9.jpg" alt="" />
+            </section>
+        </section>
+
+        <!--Q10-->
+        <section>
+            <span class="subtle">Question 10</span>
+            <section data-auto-animate>
+              <h2>問題10</h2>
+              <h4>page 577, chapter 8.4 Exercise 36</h4>
+              <div class="question-block" data-id="question9">
+                Use generating functions to solve the recurrence relation $a_k = 3a_{k-1} + 4^{k-1}$ with the initial condition $a_0 = 1$.
+              </div>
+            </section>
+            <section data-auto-animate>
+              <h2>問題10</h2>
+              <h4>page 577, chapter 8.4 Exercise 36</h4>
+              <div class="question-block" data-id="question9">
+                Use generating functions to solve the recurrence relation $a_k = 3a_{k-1} + 4^{k-1}$ with the initial condition $a_0 = 1$.
+              </div>
+              <img src="img/ch8/HW08_10.jpg" alt="" />
+            </section>
         </section>
 
 
