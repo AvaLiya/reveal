@@ -410,7 +410,21 @@
               <div class="question-block" data-id="question9">
                 Use generating functions to solve the recurrence relation $a_k = 7a_{k-1}$ with the initial condition $a_0 = 5$.
               </div>
-              <img src="img/ch8/HW08_9.jpg" alt="" />
+              <p class="tiny-text">
+                This problem is like Example 16. First let $G(x) = \sum\limits_{k=0}^\infty a_kx^k$. <br>
+                Then $xG(x) = \sum\limits_{k=0}^\infty a_kx^{k+1} = \sum\limits_{k=1}^\infty a_{k-1}x^k$ <br>
+                (by changing the name of the variable from k to k + 1 ). Thus <br>
+                \begin{eqnarray*}
+                    G(x) - 7xG(x) 
+                    & = & \sum\limits_{k=0}^\infty a_kx^k - \sum\limits_{k=1}^\infty 7a_{k-1}x^k \\
+                    ~ & = & a_0 + \sum\limits_{k=1}^\infty (a_k - 7a_{k-1})x^k \\
+                    ~ & = & a_0 + 0 \\
+                    ~ & = & 5,
+                \end{eqnarray*}
+                because of the given recurrence relation and initial condition. <br>
+                Thus $G(x)(1 - 7x) = 5$, so $G(x) = \underline{5/(1-7x)}$. <br>
+                From Table 1 we know then that $a_k = \underline{5 \cdot 7^k}$.
+              </p>
             </section>
         </section>
 
@@ -430,7 +444,23 @@
               <div class="question-block" data-id="question9">
                 Use generating functions to solve the recurrence relation $a_k = 3a_{k-1} + 4^{k-1}$ with the initial condition $a_0 = 1$.
               </div>
-              <img src="img/ch8/HW08_10.jpg" alt="" />
+              <p class="tiny-text">
+                Let $G(x) = \sum\limits_{k=0}^\infty a_kx^k$. <br>
+                Then $xG(x) = \sum\limits_{k=0}^\infty a_kx^{k+1} = \sum\limits_{k=1}^\infty a_{k-1}x^k$ <br>
+                (by changing the name of the variable from k to k + 1 ). Thus <br>
+                \begin{eqnarray*}
+                    G(x) - 3xG(x) 
+                    & = & \sum\limits_{k=0}^\infty a_kx^k - \sum\limits_{k=1}^\infty 3a_{k-1}x^k \\
+                    ~ & = & a_0 + \sum\limits_{k=1}^\infty (a_k - 3a_{k-1})x^k \\
+                    ~ & = & 1 + \sum\limits_{k=1}^\infty 4^{k-1}x^k \\
+                    ~ & = & 1 + x\sum\limits_{k=1}^\infty 4^{k-1}x^{k-1} \\
+                    ~ & = & 1 + x\sum\limits_{k=0}^\infty 4^kx^k \\
+                    ~ & = & 1 + x \cdot \frac{1}{1-4x} \\
+                    ~ & = & \frac{1-3x}{1-4x}.
+                \end{eqnarray*}
+                Thus $G(x)(1 - 3x) = (1 - 3x)/(1 - 4x)$, so $G(x) = \underline{1/(1-4x)}$. <br>
+                Therefore $a_k = \underline{4^k}$, from Table 1.
+              </p>
             </section>
         </section>
 
